@@ -23,10 +23,8 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install ChromeDriver
-        uses: nanasess/setup-chromedriver@v1
-        with:
-          chromedriver-version: 'latest'
+      - name: Check Chrome version
+        run: google-chrome --version || chromium-browser --version || echo "Chrome not found"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
