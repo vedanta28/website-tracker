@@ -41,7 +41,7 @@ class WebsiteTracker:
                 if attempt == self.max_retries - 1:
                     raise
                 print(f"Attempt {attempt + 1} failed, retrying...")
-                time.sleep(1)
+                time.sleep(3)
 
     def enter_pin_code(self, driver):
         try:
@@ -50,9 +50,9 @@ class WebsiteTracker:
             
             # Clear any existing value and enter the PIN code
             pin_input.clear()
-            time.sleep(1)  # Small delay after clear
+            time.sleep(3)  # Small delay after clear
             pin_input.send_keys(self.pin_code)
-            time.sleep(1)  # Small delay after entering PIN
+            time.sleep(3)  # Small delay after entering PIN
             
             # Trigger input event to make dropdown appear
             driver.execute_script("""
@@ -64,7 +64,7 @@ class WebsiteTracker:
             """, pin_input)
             
             # Wait for the dropdown and click the first location
-            time.sleep(1)  # Increased wait time for dropdown
+            time.sleep(3)  # Increased wait time for dropdown
             
             # Try to find and click the location with retry logic
             for attempt in range(self.max_retries):
@@ -72,7 +72,7 @@ class WebsiteTracker:
                     location = self.wait_and_find_element(driver, By.CLASS_NAME, "searchitem-name")
                     # Scroll the element into view
                     driver.execute_script("arguments[0].scrollIntoView(true);", location)
-                    time.sleep(1)  # Wait for scroll to complete
+                    time.sleep(3)  # Wait for scroll to complete
                     location.click()
                     break
                 except (ElementClickInterceptedException, StaleElementReferenceException):
@@ -82,7 +82,7 @@ class WebsiteTracker:
                     time.sleep(2)
             
             # Wait for the page to update after location selection
-            time.sleep(1)  # Increased wait time after location selection
+            time.sleep(3)  # Increased wait time after location selection
             return True
             
         except Exception as e:
@@ -93,7 +93,7 @@ class WebsiteTracker:
         driver = self.create_driver()
         try:
             driver.get(url)
-            time.sleep(1)  # Wait for initial page load
+            time.sleep(3)  # Wait for initial page load
             
             # First enter the PIN code and select location
             if not self.enter_pin_code(driver):
@@ -200,7 +200,7 @@ class WebsiteTracker:
                         print(f"Failed after {self.max_retries} attempts: {str(e)}")
                     else:
                         print(f"Attempt {attempt + 1} failed, retrying...")
-                        time.sleep(1)
+                        time.sleep(3)
 
 # Example usage
 if __name__ == "__main__":
