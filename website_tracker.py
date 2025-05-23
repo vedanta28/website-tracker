@@ -206,10 +206,10 @@ class WebsiteTracker:
 if __name__ == "__main__":
     # Define the websites to monitor
     websites = [
-        "https://shop.amul.com/en/product/amul-high-protein-rose-lassi-200-ml-or-pack-of-30",
-        "https://shop.amul.com/en/product/amul-high-protein-blueberry-shake-200-ml-or-pack-of-30",
+        # "https://shop.amul.com/en/product/amul-high-protein-rose-lassi-200-ml-or-pack-of-30",
+        # "https://shop.amul.com/en/product/amul-high-protein-blueberry-shake-200-ml-or-pack-of-30",
         "https://shop.amul.com/en/product/amul-high-protein-buttermilk-200-ml-or-pack-of-30",
-        "https://shop.amul.com/en/product/amul-high-protein-plain-lassi-200-ml-or-pack-of-30"
+        # "https://shop.amul.com/en/product/amul-high-protein-plain-lassi-200-ml-or-pack-of-30"
     ]
     
     # Email configuration
@@ -222,6 +222,6 @@ if __name__ == "__main__":
     }
     
     # Create and start the tracker
-    tracker = WebsiteTracker(pin_code="500084", email_config=email_config)
+    tracker = WebsiteTracker(pin_code="560048", email_config=email_config)
     print("Starting website monitoring...")
     tracker.monitor_websites(websites) 
