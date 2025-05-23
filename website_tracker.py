@@ -158,7 +158,7 @@ class WebsiteTracker:
             Please check the website to place your order.
 
             Best regards,
-            Your Website Tracker
+            Lassi Tracker
             """
 
             msg.attach(MIMEText(body, 'plain'))
