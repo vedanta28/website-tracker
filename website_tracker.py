@@ -207,8 +207,8 @@ if __name__ == "__main__":
     # Define the websites to monitor
     websites = [
         # "https://shop.amul.com/en/product/amul-high-protein-rose-lassi-200-ml-or-pack-of-30",
-        # "https://shop.amul.com/en/product/amul-high-protein-blueberry-shake-200-ml-or-pack-of-30",
-        "https://shop.amul.com/en/product/amul-high-protein-buttermilk-200-ml-or-pack-of-30",
+        "https://shop.amul.com/en/product/amul-high-protein-blueberry-shake-200-ml-or-pack-of-30",
+        # "https://shop.amul.com/en/product/amul-high-protein-buttermilk-200-ml-or-pack-of-30",
         # "https://shop.amul.com/en/product/amul-high-protein-plain-lassi-200-ml-or-pack-of-30"
     ]
     
