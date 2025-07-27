@@ -222,6 +222,6 @@ if __name__ == "__main__":
     }
     
     # Create and start the tracker
-    tracker = WebsiteTracker(pin_code="560048", email_config=email_config)
+    tracker = WebsiteTracker(pin_code="500084", email_config=email_config)
     print("Starting website monitoring...")
     tracker.monitor_websites(websites) 
